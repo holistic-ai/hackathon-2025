@@ -1,0 +1,67 @@
+[submodule "track_a_iron_man/examples/deep_research"]
+	path = track_a_iron_man/examples/deep_research
+	url = https://github.com/langchain-ai/open_deep_research.git
+
+[submodule "track_a_iron_man/examples/react_agent"]
+	path = track_a_iron_man/examples/react_agent
+	url = https://github.com/langchain-ai/react-agent.git
+
+[submodule "track_b_glass_box/examples/failure_attribution"]
+	path = track_b_glass_box/examples/failure_attribution
+	url = https://github.com/mingyin1/Agents_Failure_Attribution.git
+
+[submodule "track_c_dear_grandma/examples/agentharm"]
+	path = track_c_dear_grandma/examples/agentharm
+	url = https://github.com/UKGovernmentBEIS/inspect_evals.git
+
+[submodule "track_c_dear_grandma/examples/harmbench"]
+	path = track_c_dear_grandma/examples/harmbench
+	url = https://github.com/centerforaisafety/HarmBench.git
+[submodule "winners/jailbreak_lab"]
+	path = winners/jailbreak_lab
+	url = https://github.com/Suhas-13/holistichack/
+[submodule "winners/the_luck_stroke"]
+	path = winners/the_luck_stroke
+	url = https://github.com/Slices1/the-luck-stroke-agent-iron-man
+[submodule "winners/illusion"]
+	path = winners/illusion
+	url = https://github.com/Stanleyhoo1/Illusion
+[submodule "winners/genaiexplainer"]
+	path = winners/genaiexplainer
+	url = https://github.com/ArunJoseph19/Explainable-AI
+[submodule "winners/fairquote"]
+	path = winners/fairquote
+	url = https://github.com/krishnagopika/FairQuote
+[submodule "winners/project_emotions"]
+	path = winners/project_emotions
+	url = https://github.com/yb235/007_Agent
+[submodule "winners/crd2"]
+	path = winners/crd2
+	url = https://github.com/alejandroRdzGarza/final_great_agent_hackaton
+[submodule "winners/hsia"]
+	path = winners/hsia
+	url = https://github.com/william-Dic/HSVI---Holistic-Hackathon
+[submodule "winners/smart_guard"]
+	path = winners/smart_guard
+	url = https://github.com/JZ1101/Smart_Guard
+[submodule "winners/thermotrace"]
+	path = winners/thermotrace
+	url = https://github.com/Pamekitti/explainable-industrial-cooling-llm-agent
+[submodule "winners/biassphere"]
+	path = winners/biassphere
+	url = https://github.com/graceytl/BiasSphere
+[submodule "winners/beaconn"]
+	path = winners/beaconn
+	url = https://github.com/bulutyazgan/beaconn/
+[submodule "winners/aisians"]
+	path = winners/aisians
+	url = https://github.com/verrellbd/AIsians-Great-Agent-Hack-2025
+[submodule "winners/pharmamiku"]
+	path = winners/pharmamiku
+	url = https://github.com/Raip036/MT_Warriors-HollisticGreatAgentHack2025
+[submodule "winners/zarks_ai"]
+	path = winners/zarks_ai
+	url = https://github.com/notacountry/UCL-Hackathon
+[submodule "winners/introspectai"]
+	path = winners/introspectai
+	url = https://github.com/Aurther-Nadeem/great-agent-hack-2025

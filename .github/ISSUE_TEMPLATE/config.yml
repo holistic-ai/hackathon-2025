@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 💬 Discord Community (Recommended)
+    url: https://discord.com/invite/QBTtWP2SU6?referrer=luma
+    about: Get real-time help during the hackathon. Ask @zekunwu_73994 for API keys and SageMaker access.
+  - name: 📚 Documentation & FAQ
+    url: https://github.com/holistic-ai/hackthon-2025/blob/main/docs/FAQ.md
+    about: Check our FAQ and documentation before opening an issue.
+  - name: 📧 Direct Email Contact
+    url: mailto:zekun.wu@holisticai.com
+    about: For urgent matters, contact Zekun Wu directly via email.

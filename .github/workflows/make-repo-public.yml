@@ -1,0 +1,56 @@
+name: Make Repository Public
+
+on:
+  schedule:
+    # November 15, 2025 at 11:00 AM GMT (UTC)
+    # Cron format: minute hour day month day-of-week
+    - cron: '0 11 15 11 *'
+  workflow_dispatch: # Allow manual trigger for testing
+
+jobs:
+  make-public:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Make repository public
+        env:
+          GITHUB_TOKEN: ${{ secrets.REPO_VISIBILITY_TOKEN }}
+          REPO_OWNER: holistic-ai
+          REPO_NAME: hackthon-2025
+        run: |
+          echo "Making repository public at $(date -u)"
+
+          # Use GitHub API to change repository visibility
+          curl -X PATCH \
+            -H "Accept: application/vnd.github+json" \
+            -H "Authorization: Bearer $GITHUB_TOKEN" \
+            -H "X-GitHub-Api-Version: 2022-11-28" \
+            https://api.github.com/repos/$REPO_OWNER/$REPO_NAME \
+            -d '{"private":false}'
+
+          echo "Repository is now public!"
+
+      - name: Verify repository is public
+        env:
+          GITHUB_TOKEN: ${{ secrets.REPO_VISIBILITY_TOKEN }}
+          REPO_OWNER: holistic-ai
+          REPO_NAME: hackthon-2025
+        run: |
+          # Check repository visibility
+          VISIBILITY=$(curl -s \
+            -H "Accept: application/vnd.github+json" \
+            -H "Authorization: Bearer $GITHUB_TOKEN" \
+            -H "X-GitHub-Api-Version: 2022-11-28" \
+            https://api.github.com/repos/$REPO_OWNER/$REPO_NAME | jq -r '.private')
+
+          if [ "$VISIBILITY" = "false" ]; then
+            echo "✅ Repository is successfully public"
+          else
+            echo "❌ Repository is still private - something went wrong!"
+            exit 1
+          fi
+
+      - name: Send Discord notification (optional)
+        if: success()
+        run: |
+          echo "Repository made public successfully at $(date -u)"
+          # Add Discord webhook notification here if needed

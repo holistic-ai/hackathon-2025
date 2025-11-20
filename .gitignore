@@ -1,0 +1,74 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
+venv/
+.venv/
+ENV/
+env/
+
+# Environment variables
+.env
+.env.local
+*.env
+!.env.example
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# Carbon tracking
+emissions.csv
+emissions*.csv
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+CLAUDE.md
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Test outputs
+test_*.py
+verify_*.py
+!verify_setup.py  # Allow verify_setup.py as it's a useful tool
+
+# Logs
+*.log
+
+# LangSmith
+.langsmith/
+venv/
+templates/poster_templates/venv/
+
+# Office temporary files
+~$*.pptx
+~$*.docx
+~$*.xlsx
+*.pptx~
+*.docx~

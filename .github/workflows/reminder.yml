@@ -1,0 +1,54 @@
+name: Repository Public Reminder
+
+on:
+  schedule:
+    # 1 hour before (10:00 AM GMT)
+    - cron: '0 10 15 11 *'
+    # 30 minutes before (10:30 AM GMT)
+    - cron: '30 10 15 11 *'
+  workflow_dispatch:
+
+jobs:
+  reminder:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      issues: write
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Check repository status
+        env:
+          GITHUB_TOKEN: ${{ secrets.REPO_VISIBILITY_TOKEN }}
+          REPO_OWNER: holistic-ai
+          REPO_NAME: hackthon-2025
+        run: |
+          echo "🔔 Reminder: Repository should be made public at 11:00 AM GMT"
+          echo "Current time (UTC): $(date -u)"
+
+          # Check current visibility
+          VISIBILITY=$(curl -s \
+            -H "Accept: application/vnd.github+json" \
+            -H "Authorization: Bearer $GITHUB_TOKEN" \
+            -H "X-GitHub-Api-Version: 2022-11-28" \
+            https://api.github.com/repos/$REPO_OWNER/$REPO_NAME | jq -r '.private')
+
+          if [ "$VISIBILITY" = "true" ]; then
+            echo "⚠️ Repository is currently PRIVATE"
+            echo "📍 Will be made public in: $(( $(date -d '2025-11-15 11:00:00 UTC' +%s) - $(date +%s) )) seconds"
+          else
+            echo "✅ Repository is already PUBLIC"
+          fi
+
+      - name: Create GitHub Issue reminder
+        if: github.event_name == 'schedule'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          echo "Creating reminder issue..."
+          # Create an issue as backup reminder
+          gh issue create \
+            --title "🚨 REMINDER: Make repo public at 11:00 AM GMT TODAY" \
+            --body "This is an automated reminder. The repository should be made public at 11:00 AM GMT (in 1 hour or 30 minutes)." \
+            --label "reminder" || true

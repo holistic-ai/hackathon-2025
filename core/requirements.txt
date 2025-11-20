@@ -1,0 +1,84 @@
+# ============================================================================
+# Core Agent Framework Dependencies
+# ============================================================================
+
+# LangGraph & LangChain - Agent orchestration and LLM interfaces
+langgraph>=0.2.0
+langchain-core>=0.3.0
+langchain-community>=0.3.0
+
+# HTTP requests for Holistic AI Bedrock Proxy API
+requests>=2.31.0
+
+# Model Providers
+langchain-ollama>=0.1.0  # For local Ollama models (gpt-oss)
+langchain-openai>=0.3.0  # For OpenAI GPT-5 series
+
+# ============================================================================
+# Tools & Search
+# ============================================================================
+
+# Valyu AI search engine (using local valyu_tools/ component)
+valyu>=2.0.0  # Core Valyu SDK for web search
+
+# ============================================================================
+# Data & Validation
+# ============================================================================
+
+# Pydantic for data validation and structured output
+pydantic>=2.0.0
+typing-extensions>=4.0.0
+
+# Datasets for benchmarks (HLE, etc.)
+datasets>=2.14.0
+huggingface-hub>=0.20.0  # Required for dataset loading
+
+# ============================================================================
+# Configuration & Environment
+# ============================================================================
+
+# Environment variable management
+python-dotenv>=1.0.0
+
+# ============================================================================
+# Observability & Monitoring
+# ============================================================================
+
+# LangSmith for tracing and debugging
+langsmith>=0.3.0
+
+# Token counting and cost estimation
+tiktoken>=0.5.0
+
+# Carbon footprint tracking
+codecarbon>=2.3.0
+
+# ============================================================================
+# User Interface & Progress
+# ============================================================================
+
+# Progress bars for benchmarks
+tqdm>=4.65.0
+
+# Jupyter notebook support (for tutorials)
+jupyter>=1.0.0
+ipykernel>=6.25.0
+ipywidgets>=8.0.0
+
+# ============================================================================
+# Optional Dependencies
+# ============================================================================
+
+# LangGraph Studio (for visual debugging and testing)
+# Install separately: pip install langgraph-studio
+# Or use the desktop app: https://github.com/langchain-ai/langgraph-studio
+
+# ============================================================================
+# Development Tools (optional)
+# ============================================================================
+
+# Uncomment for development:
+# pytest>=7.4.0          # Testing framework
+# black>=23.0.0          # Code formatting
+# ruff>=0.1.0            # Linting
+# mypy>=1.5.0            # Type checking

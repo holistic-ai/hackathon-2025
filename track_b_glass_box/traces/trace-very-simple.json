@@ -1,0 +1,292 @@
+[
+    {
+        "name": "ReAct Agent",
+        "start_time": "2025-07-28T05:42:51.836219",
+        "end_time": "2025-07-28T05:42:56.823942",
+        "run_type": "chain",
+        "inputs": {
+            "messages": [
+                {
+                    "type": "human",
+                    "content": "What is a GPU?\n"
+                }
+            ]
+        },
+        "outputs": {
+            "messages": [
+                {
+                    "content": "What is a GPU?\n",
+                    "additional_kwargs": {},
+                    "response_metadata": {},
+                    "type": "human",
+                    "id": "e7849012-9dc8-4cb5-ab9a-7d3413943077",
+                    "example": false
+                },
+                {
+                    "content": "A GPU, or Graphics Processing Unit, is a specialized electronic circuit designed to accelerate the processing of images and graphics. It is highly efficient at performing parallel operations on large blocks of data, making it ideal for rendering graphics in video games, animations, and visual effects. Beyond graphics, GPUs are also widely used in scientific computing, machine learning, and cryptocurrency mining due to their ability to handle complex mathematical calculations quickly. In essence, a GPU complements the CPU (Central Processing Unit) by offloading and speeding up tasks related to visual computing and parallel data processing.",
+                    "additional_kwargs": {},
+                    "response_metadata": {
+                        "finish_reason": "stop",
+                        "model_name": "gpt-4.1-mini-2025-04-14",
+                        "system_fingerprint": "fp_6f2eabb9a5",
+                        "service_tier": "default"
+                    },
+                    "type": "ai",
+                    "id": "run--f9d5b500-69d0-4751-a9d6-a78df153d3be",
+                    "example": false,
+                    "tool_calls": [],
+                    "invalid_tool_calls": []
+                }
+            ]
+        },
+        "parent_run_id": null,
+        "events": [
+            {
+                "name": "start",
+                "time": "2025-07-28T05:42:51.836219+00:00"
+            },
+            {
+                "name": "end",
+                "time": "2025-07-28T05:42:56.823942+00:00"
+            }
+        ],
+        "tags": [],
+        "id": "1f06b75b-3a54-6918-b0a3-d23cf007ec77",
+        "child_run_ids": [
+            "dcd21300-e41c-43f1-930c-88e707a5f13c",
+            "f9d5b500-69d0-4751-a9d6-a78df153d3be",
+            "f7daeb33-7155-419e-ab55-a5f59006c830"
+        ],
+        "parent_run_ids": [],
+        "feedback_stats": null
+    },
+    {
+        "name": "call_model",
+        "start_time": "2025-07-28T05:42:51.855675",
+        "end_time": "2025-07-28T05:42:56.812340",
+        "run_type": "chain",
+        "inputs": {
+            "input": {
+                "messages": [
+                    {
+                        "content": "What is a GPU?\n",
+                        "additional_kwargs": {},
+                        "response_metadata": {},
+                        "type": "human",
+                        "id": "e7849012-9dc8-4cb5-ab9a-7d3413943077",
+                        "example": false
+                    }
+                ],
+                "is_last_step": false
+            }
+        },
+        "outputs": {
+            "messages": [
+                {
+                    "content": "A GPU, or Graphics Processing Unit, is a specialized electronic circuit designed to accelerate the processing of images and graphics. It is highly efficient at performing parallel operations on large blocks of data, making it ideal for rendering graphics in video games, animations, and visual effects. Beyond graphics, GPUs are also widely used in scientific computing, machine learning, and cryptocurrency mining due to their ability to handle complex mathematical calculations quickly. In essence, a GPU complements the CPU (Central Processing Unit) by offloading and speeding up tasks related to visual computing and parallel data processing.",
+                    "additional_kwargs": {},
+                    "response_metadata": {
+                        "finish_reason": "stop",
+                        "model_name": "gpt-4.1-mini-2025-04-14",
+                        "system_fingerprint": "fp_6f2eabb9a5",
+                        "service_tier": "default"
+                    },
+                    "type": "ai",
+                    "id": "run--f9d5b500-69d0-4751-a9d6-a78df153d3be",
+                    "example": false,
+                    "tool_calls": [],
+                    "invalid_tool_calls": []
+                }
+            ]
+        },
+        "parent_run_id": "1f06b75b-3a54-6918-b0a3-d23cf007ec77",
+        "events": [
+            {
+                "name": "start",
+                "time": "2025-07-28T05:42:51.855675+00:00"
+            },
+            {
+                "name": "end",
+                "time": "2025-07-28T05:42:56.812340+00:00"
+            }
+        ],
+        "tags": [
+            "graph:step:1"
+        ],
+        "id": "dcd21300-e41c-43f1-930c-88e707a5f13c",
+        "child_run_ids": [
+            "f9d5b500-69d0-4751-a9d6-a78df153d3be",
+            "f7daeb33-7155-419e-ab55-a5f59006c830"
+        ],
+        "parent_run_ids": [
+            "1f06b75b-3a54-6918-b0a3-d23cf007ec77"
+        ],
+        "feedback_stats": null
+    },
+    {
+        "name": "ChatOpenAI",
+        "start_time": "2025-07-28T05:42:53.809010",
+        "end_time": "2025-07-28T05:42:56.810105",
+        "run_type": "llm",
+        "inputs": {
+            "messages": [
+                [
+                    {
+                        "lc": 1,
+                        "type": "constructor",
+                        "id": [
+                            "langchain",
+                            "schema",
+                            "messages",
+                            "SystemMessage"
+                        ],
+                        "kwargs": {
+                            "content": "You are a helpful AI assistant.\n\nSystem time: 2025-07-28T05:42:53.808118+00:00",
+                            "type": "system"
+                        }
+                    },
+                    {
+                        "lc": 1,
+                        "type": "constructor",
+                        "id": [
+                            "langchain",
+                            "schema",
+                            "messages",
+                            "HumanMessage"
+                        ],
+                        "kwargs": {
+                            "content": "What is a GPU?\n",
+                            "type": "human",
+                            "id": "e7849012-9dc8-4cb5-ab9a-7d3413943077"
+                        }
+                    }
+                ]
+            ]
+        },
+        "outputs": {
+            "generations": [
+                {
+                    "text": "A GPU, or Graphics Processing Unit, is a specialized electronic circuit designed to accelerate the processing of images and graphics. It is highly efficient at performing parallel operations on large blocks of data, making it ideal for rendering graphics in video games, animations, and visual effects. Beyond graphics, GPUs are also widely used in scientific computing, machine learning, and cryptocurrency mining due to their ability to handle complex mathematical calculations quickly. In essence, a GPU complements the CPU (Central Processing Unit) by offloading and speeding up tasks related to visual computing and parallel data processing.",
+                    "generation_info": {
+                        "finish_reason": "stop",
+                        "model_name": "gpt-4.1-mini-2025-04-14",
+                        "system_fingerprint": "fp_6f2eabb9a5",
+                        "service_tier": "default"
+                    },
+                    "type": "ChatGeneration",
+                    "message": {
+                        "lc": 1,
+                        "type": "constructor",
+                        "id": [
+                            "langchain",
+                            "schema",
+                            "messages",
+                            "AIMessage"
+                        ],
+                        "kwargs": {
+                            "content": "A GPU, or Graphics Processing Unit, is a specialized electronic circuit designed to accelerate the processing of images and graphics. It is highly efficient at performing parallel operations on large blocks of data, making it ideal for rendering graphics in video games, animations, and visual effects. Beyond graphics, GPUs are also widely used in scientific computing, machine learning, and cryptocurrency mining due to their ability to handle complex mathematical calculations quickly. In essence, a GPU complements the CPU (Central Processing Unit) by offloading and speeding up tasks related to visual computing and parallel data processing.",
+                            "response_metadata": {
+                                "finish_reason": "stop",
+                                "model_name": "gpt-4.1-mini-2025-04-14",
+                                "system_fingerprint": "fp_6f2eabb9a5",
+                                "service_tier": "default"
+                            },
+                            "type": "ai",
+                            "id": "run--f9d5b500-69d0-4751-a9d6-a78df153d3be",
+                            "tool_calls": [],
+                            "invalid_tool_calls": []
+                        }
+                    }
+                }
+            ],
+            "llm_output": null,
+            "run": null,
+            "type": "LLMResult"
+        },
+        "parent_run_id": "dcd21300-e41c-43f1-930c-88e707a5f13c",
+        "events": [
+            {
+                "name": "start",
+                "time": "2025-07-28T05:42:53.809010+00:00"
+            },
+            {
+                "name": "new_token",
+                "time": "2025-07-28T05:42:54.368545+00:00"
+            },
+            {
+                "name": "end",
+                "time": "2025-07-28T05:42:56.810105+00:00"
+            }
+        ],
+        "tags": [
+            "seq:step:1"
+        ],
+        "id": "f9d5b500-69d0-4751-a9d6-a78df153d3be",
+        "child_run_ids": null,
+        "parent_run_ids": [
+            "1f06b75b-3a54-6918-b0a3-d23cf007ec77",
+            "dcd21300-e41c-43f1-930c-88e707a5f13c"
+        ],
+        "feedback_stats": null
+    },
+    {
+        "name": "route_model_output",
+        "start_time": "2025-07-28T05:42:56.810830",
+        "end_time": "2025-07-28T05:42:56.811850",
+        "run_type": "chain",
+        "inputs": {
+            "input": {
+                "messages": [
+                    {
+                        "content": "What is a GPU?\n",
+                        "additional_kwargs": {},
+                        "response_metadata": {},
+                        "type": "human",
+                        "id": "e7849012-9dc8-4cb5-ab9a-7d3413943077",
+                        "example": false
+                    },
+                    {
+                        "content": "A GPU, or Graphics Processing Unit, is a specialized electronic circuit designed to accelerate the processing of images and graphics. It is highly efficient at performing parallel operations on large blocks of data, making it ideal for rendering graphics in video games, animations, and visual effects. Beyond graphics, GPUs are also widely used in scientific computing, machine learning, and cryptocurrency mining due to their ability to handle complex mathematical calculations quickly. In essence, a GPU complements the CPU (Central Processing Unit) by offloading and speeding up tasks related to visual computing and parallel data processing.",
+                        "additional_kwargs": {},
+                        "response_metadata": {
+                            "finish_reason": "stop",
+                            "model_name": "gpt-4.1-mini-2025-04-14",
+                            "system_fingerprint": "fp_6f2eabb9a5",
+                            "service_tier": "default"
+                        },
+                        "type": "ai",
+                        "id": "run--f9d5b500-69d0-4751-a9d6-a78df153d3be",
+                        "example": false,
+                        "tool_calls": [],
+                        "invalid_tool_calls": []
+                    }
+                ],
+                "is_last_step": false
+            }
+        },
+        "outputs": {
+            "output": "__end__"
+        },
+        "parent_run_id": "dcd21300-e41c-43f1-930c-88e707a5f13c",
+        "events": [
+            {
+                "name": "start",
+                "time": "2025-07-28T05:42:56.810830+00:00"
+            },
+            {
+                "name": "end",
+                "time": "2025-07-28T05:42:56.811850+00:00"
+            }
+        ],
+        "tags": [
+            "seq:step:3"
+        ],
+        "id": "f7daeb33-7155-419e-ab55-a5f59006c830",
+        "child_run_ids": null,
+        "parent_run_ids": [
+            "1f06b75b-3a54-6918-b0a3-d23cf007ec77",
+            "dcd21300-e41c-43f1-930c-88e707a5f13c"
+        ],
+        "feedback_stats": null
+    }
+]
