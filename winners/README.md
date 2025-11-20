@@ -107,15 +107,6 @@ This directory contains the repositories of all winning teams from the Great Age
 
 ---
 
-## Total Prize Distribution
-
-- **Total Teams with Prizes**: 17
-- **Total Teams in Winners Directory**: 16
-- **Total AWS Credits**: $4,500
-- **Total Valyu Credits**: £4,500
-- **Total Cash Prizes**: £38,250
-- **Overall Prize Pool**: £65,000
-
 ## Cloning All Winners
 
 To clone this repository with all winner submodules:
