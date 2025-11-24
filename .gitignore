@@ -72,3 +72,5 @@ templates/poster_templates/venv/
 ~$*.xlsx
 *.pptx~
 *.docx~
+POST_EVENT_REPORT.md
+WINNER_RESEARCH_INSIGHTS.md
